@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-@import "reset";
-@import "basic";
-@import "header";
-@import "footer";
-@import "color";
+@import "./reset.scss";
+@import "./basic.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./color.scss";
 
 .container {
   width: 95%;
