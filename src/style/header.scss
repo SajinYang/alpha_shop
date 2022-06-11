@@ -1,0 +1,162 @@
+/////////// header ///////////
+
+header {
+  width: 90%;
+  height: 60px;
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  top: 0;
+  background-color: var(--body-background-color);
+
+  .nav-logo {
+    height: 30px;
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .nav-menu {
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-out;
+    transform: scale(1, 0);
+    transform-origin: top;
+    background-color: var(--body-background-color);
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--nav-menu-item-border);
+      opacity: 0;
+    }
+
+    .nav-link {
+      color: var(--body-text-color);
+    }
+  }
+
+  .nav-tools-container {
+    padding: 1.2rem 0;
+
+    svg {
+      fill: var(--body-text-color);
+    }
+
+    .nav-tools-icon {
+      height: 24px;
+      width: 24px;
+      margin: 0 1rem;
+      opacity: 0;
+    }
+  }
+
+  .navbar-toggle-label {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+
+    .hamburger {
+      width: 16px;
+      height: 3px;
+      background: var(--bamburger-icon-color);
+
+      &::after,
+      &::before {
+        height: 3px;
+        background: var(--bamburger-icon-color);
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+      }
+
+      &::after {
+        width: 24px;
+        top: 8%;
+      }
+
+      &::before {
+        width: 8px;
+        bottom: 8%;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    visibility: hidden;
+  }
+}
+
+.navbar-toggle:checked~.nav-menu {
+  transform: scale(1, 1);
+
+  .nav-item,
+  .nav-tools-icon {
+    opacity: 1;
+    transition: opacity 0.2s ease-out 0.15s;
+  }
+}
+
+
+@media screen and (min-width: 375px) {
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    z-index: 999;
+    position: fixed;
+    width: 90%;
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15px;
+
+    .nav-logo {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    .nav-menu {
+      all: unset;
+      grid-column: 1/2;
+      grid-row: 1/2;
+
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+
+        .nav-item {
+          opacity: 1;
+          padding: 0;
+          border-bottom: none;
+          margin: 0 1rem;
+        }
+      }
+
+      .nav-tools-container {
+        position: absolute;
+        right: 0;
+        top: 0.3rem;
+
+
+        .nav-tools-icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

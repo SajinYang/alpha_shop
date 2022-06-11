@@ -1,0 +1,47 @@
+html[data-theme="light"] {
+  background: white;
+  color: black;
+  --body-background-color: white;
+  --body-text-color: black;
+  --border-normal: black;
+  --nav-menu-item-border: rgba(42, 42, 42, 0.1);
+  --bamburger-icon-color: #2A2A2A;
+  --step-circle-background: black;
+  --step-text-color: white;
+  --step-line-color: black;
+  --radio-color: #2A2A2A;
+  --input-border-color: #4A4A4A;
+  --input-text-color: #808080;
+  --products-container-background: white;
+  --products-container-border: #F0F0F5;
+  --car-item-button-background: #F0F0F5;
+  --btn-primary-backgroung: #F67599;
+  --footer-background: #E5E5E5;
+  --footer-text-color: #808080;
+  --logo: black;
+}
+
+html[data-theme="dark"] {
+  background: black;
+  color: white;
+  --body-background-color: black;
+  --body-text-color: white;
+  --border-normal: black;
+  --nav-menu-item-border: white;
+  --bamburger-icon-color: white;
+  --step-circle-background: #333333;
+  --step-text-color: white;
+  --step-line-color: white;
+  --radio-color: #FFFFFF;
+  --input-background-color: black;
+  --input-border-color: #5E5E5E;
+  --input-text-color: #5E5E5E;
+  --products-container-background: #383838;
+  --products-container-border: rgba(255, 255, 255, 0.2);
+  --car-item-button-background: #808080;
+  --btn-primary-backgroung: #F67599;
+  --footer-background: #333333;
+  --footer-text-color: #FFFFFF;
+  --logo: white;
+}
+/*# sourceMappingURL=color.css.map */
