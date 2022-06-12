@@ -20,11 +20,15 @@ const freightFee = document.querySelector('.freight-fee')
 const amountPrice = document.querySelector('.amount-price')
 const dhlDelivery = document.querySelector('.dhl')
 const normalDelivery = document.querySelector('.normal')
+const navToolsContainer = document.querySelector('.nav-tools-container')
+const html = document.querySelector('#html')
+const modeIcon = document.querySelector('.mode')
 
 let step = 0
 let total = 0
 let deliveryFee = ''
 
+// step 步驟
 function handleBtnControlClicked(e) {
   e.preventDefault();
   const nowStep = steps[step]
@@ -54,6 +58,7 @@ function handleBtnControlClicked(e) {
   setBtnStatus()
 }
 
+// 表單上一步、下一步變化
 function setBtnStatus(e) {
   const btnOutline = document.querySelector('.btn-outline')
   const btnPrimary = document.querySelector('.btn-primary')
@@ -123,11 +128,9 @@ function getDeliveryFee(e) {
   amountPrice.innerText = `$${total}`
 }
 
-const navToolsContainer = document.querySelector('.nav-tools-container')
-const html = document.querySelector('#html')
-const modeIcon = document.querySelector('.mode')
 
-// 深色模式
+
+// 深色、一般模式切換
 function changeMode(e) {
   const target = e.target
   if (target.matches('.light-mode')) {

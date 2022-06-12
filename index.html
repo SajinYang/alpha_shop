@@ -283,22 +283,26 @@
                 <h4 class="part-title">運送方式</h4>
                 <div class="form-content part-2">
 
-                  <!-- normal deliver -->
-                  <label for="normal" class="form-delivery normal" data-id="1">
-                    <input type="radio" name="shipping" id="normal">
-                    <span>標準運送</span>
-                    <span>約3~7個工作天</span>
-                    <span>免費</span>
-                  </label>
+                  <div class="delivery-container">
+                    <!-- normal deliver -->
+                    <label for="normal" class="form-delivery normal" data-id="1">
+                      <input type="radio" name="shipping" id="normal">
+                      <span>標準運送</span>
+                      <span>約3~7個工作天</span>
+                      <span>免費</span>
+                    </label>
+                  </div>
 
-                  <!-- DHL deliver -->
-                  <label for="DHL" class="form-delivery dhl " data-id="2">
-                    <input type="radio" name="shipping" id="DHL">
-                    <span>DHL 運送</span>
-                    <span>48小時內送達</span>
-                    <span>$500</span>
-                  </label>
 
+                  <div class="delivery-container">
+                    <!-- DHL deliver -->
+                    <label for="DHL" class="form-delivery dhl " data-id="2">
+                      <input type="radio" name="shipping" id="DHL">
+                      <span>DHL 運送</span>
+                      <span>48小時內送達</span>
+                      <span>$500</span>
+                    </label>
+                  </div>
 
 
                 </div>
